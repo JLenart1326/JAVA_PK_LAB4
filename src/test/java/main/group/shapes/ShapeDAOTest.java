@@ -6,6 +6,8 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.junit.jupiter.api.*;
 
+import jakarta.persistence.*;
+
 import java.sql.DatabaseMetaData;
 import java.sql.ResultSet;
 import java.util.List;
