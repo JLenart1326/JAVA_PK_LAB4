@@ -1,10 +1,22 @@
 package main.group.shapes;
 import main.group.color.Color;
+import jakarta.persistence.*;
 
+@Entity
+@Table ( name ="triangles")
 public class Triangle extends ShapeExt{
     // Pola (właściwości klasy)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column ( name ="a")
     float a;
+
+    @Column ( name ="b")
     float b;
+
+    @Column ( name ="c")
     float c;
 
     // Konstruktor (służy do tworzenia obiektów klasy)
@@ -44,4 +56,25 @@ public class Triangle extends ShapeExt{
         }
         return a+b+c;
     };
+    public Long getId() {
+        return id;
+    }
+    public float getA() {
+        return a;
+    }
+    public float getB() {
+        return b;
+    }
+    public float getC() {
+        return c;
+    }
+    public void setA(float a) {
+        this.a = a;
+    }
+    public void setB(float b) {
+        this.b = b;
+    }
+    public void setC(float c) {
+        this.c = c;
+    }
 }

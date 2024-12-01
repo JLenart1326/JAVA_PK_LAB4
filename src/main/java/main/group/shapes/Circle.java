@@ -1,10 +1,17 @@
 package main.group.shapes;
 import main.group.color.Color;
+import jakarta.persistence.*;
 
 
-
+@Entity
+@Table ( name ="circles")
 public class Circle extends ShapeExt {
     // Pola (właściwości klasy)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column ( name ="r")
     float r;
 
     // Konstruktor (służy do tworzenia obiektów klasy)
@@ -32,4 +39,15 @@ public class Circle extends ShapeExt {
     public float getPerimeter(){
         return (float) (2 * Math.PI * this.r);
     };
+
+    public Long getId() {
+        return id;
+    }
+    public double getRadius() {
+        return r;
+    }
+
+    public void setRadius(float radius) {
+        this.r = radius;
+    }
 }

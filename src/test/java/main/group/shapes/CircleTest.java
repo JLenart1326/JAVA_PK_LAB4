@@ -1,5 +1,5 @@
 package main.group.shapes;
-import main.group. color.*;
+import main.group.color.*;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
