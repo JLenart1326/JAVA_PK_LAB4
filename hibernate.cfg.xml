@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+
+    <session-factory>
+
+        <!-- Dialekt bazy danych -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!-- Sterownik JDBC -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+
+        <!-- URL połączenia do bazy danych -->
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/nazwa_bazy_danych</property>
+
+        <!-- Użytkownik bazy danych -->
+        <property name="hibernate.connection.username">twoja_nazwa_uzytkownika</property>
+
+        <!-- Hasło bazy danych -->
+        <property name="hibernate.connection.password">twoje_haslo</property>
+
+        <!-- Inne ustawienia Hibernate -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <mapping class ="main.group.hibernate.HibernateUtil"/>
+
+
+    </session-factory>
+
+</hibernate-configuration>
